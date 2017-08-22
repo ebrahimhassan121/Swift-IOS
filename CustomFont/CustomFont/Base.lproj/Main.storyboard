@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Kharabeesh Font.ttf">
+            <string>Kharabeesh</string>
+        </array>
+        <array key="NotoKufiArabic-Bold.ttf">
+            <string>NotoKufiArabic-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomFont" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="مرحبا بك" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCa-Re-uU5">
+                                <rect key="frame" x="181" y="355" width="51" height="25"/>
+                                <fontDescription key="fontDescription" name="Kharabeesh" family="Kharabeesh Font" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="IMG_20170502_103237" translatesAutoresizingMaskIntoConstraints="NO" id="x1G-CH-yBK">
+                                <rect key="frame" x="107" y="146" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="EYj-UQ-hSf"/>
+                                    <constraint firstAttribute="height" constant="200" id="PcT-zN-M0J"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fvm-ql-H83">
+                                <rect key="frame" x="28" y="578" width="358" height="150"/>
+                                <color key="backgroundColor" red="0.027938610409999998" green="0.027938610409999998" blue="0.027938610409999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="iZf-xI-2bn"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="NotoKufiArabic-Bold" family="Noto Kufi Arabic" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="x1G-CH-yBK" firstAttribute="top" relation="lessThanOrEqual" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="90" id="8wy-Ea-XbS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Fvm-ql-H83" secondAttribute="bottom" constant="8" id="GCO-1c-gY2"/>
+                            <constraint firstItem="fCa-Re-uU5" firstAttribute="top" secondItem="x1G-CH-yBK" secondAttribute="bottom" constant="9" id="Vyu-Ad-nOE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fvm-ql-H83" secondAttribute="trailing" constant="8" id="YuD-lV-UAG"/>
+                            <constraint firstItem="x1G-CH-yBK" firstAttribute="centerX" secondItem="fCa-Re-uU5" secondAttribute="centerX" id="deJ-GH-KH0"/>
+                            <constraint firstItem="x1G-CH-yBK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mXb-gq-3KH"/>
+                            <constraint firstItem="Fvm-ql-H83" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="s88-mc-2BP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ImageView" destination="x1G-CH-yBK" id="CQc-FU-cad"/>
+                        <outlet property="label" destination="Fvm-ql-H83" id="Dex-Hz-gOu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.23188405797103" y="133.69565217391306"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IMG_20170502_103237" width="1200" height="1600"/>
+    </resources>
+</document>
